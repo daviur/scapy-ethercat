@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo env PATH=$PATH PYTHONPATH=$PYTHONPATH python te
+sudo env PATH=$PATH PYTHONPATH=$PYTHONPATH python ethercat
