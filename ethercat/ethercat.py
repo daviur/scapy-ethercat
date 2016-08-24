@@ -14,7 +14,7 @@
 #
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# FITNESS FOR A jointICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
@@ -32,19 +32,19 @@ class ETHERCAT(scapy_all.Packet):
         scapy_all.LEIntField('log-address', 0),
         scapy_all.LEShortField('length', 0),
         scapy_all.LEShortField('interrupt', 0),
-        scapy_all.LEIntField('part1', 0),
+        scapy_all.LEIntField('joint1', 0),
         scapy_all.LEShortField('mode1', 0),
         scapy_all.StrFixedLenField('padding1', 0, length=34),
-        scapy_all.LEIntField('part2', 0),
+        scapy_all.LEIntField('joint2', 0),
         scapy_all.LEShortField('mode2', 0),
         scapy_all.StrFixedLenField('padding2', 0, length=34),
-        scapy_all.LEIntField('part3', 0),
+        scapy_all.LEIntField('joint3', 0),
         scapy_all.LEShortField('mode3', 0),
         scapy_all.StrFixedLenField('padding3', 0, length=34),
-        scapy_all.LEIntField('part4', 0),
+        scapy_all.LEIntField('joint4', 0),
         scapy_all.LEShortField('mode4', 0),
         scapy_all.StrFixedLenField('padding4', 0, length=34),
-        scapy_all.LEIntField('part5', 0),
+        scapy_all.LEIntField('joint5', 0),
         scapy_all.LEShortField('mode5', 0),
         scapy_all.StrFixedLenField('padding5', 0, length=234),
         scapy_all.LEShortField('working-counter', 0)
