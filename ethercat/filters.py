@@ -20,13 +20,21 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Sniffing functions to be used as parameter prn of the "sniff" command in
-Scapy 2.3.1.
+"""Sniffing functions to be used as parameter prn of the "sniff" command in Scapy.
 """
 
 from __future__ import print_function, division
 
+from ethercat import ETHERCAT
+
 counter = 0
 
-def read_te_sensors(packet):
-    pass
+
+def read_join_control(packet):
+    if ETHERCAT in packet:
+        join1 = packet[ETHERCAT].join1
+        join2 = packet[ETHERCAT].join2
+        join3 = packet[ETHERCAT].join3
+        join4 = packet[ETHERCAT].join4
+        join5 = packet[ETHERCAT].join5
+        return '-'.join(map(str, [join1, join2, join3, join4, join5]))
